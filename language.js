@@ -19,7 +19,7 @@
   document.querySelector('#language').value=lang;
   for (const {node,key,original} of nodes) node.textContent=original.replace(key,lang==='en'?key:translations[key][lang]);
   for (const {el,attr,key} of attrs) el.setAttribute(attr,lang==='en'?key:translations[key][lang]);
-  document.title={en:'Alicia Mortgage | A home in Spain. A person on your side.',es:'Alicia Mortgage | Un hogar en España. Alguien a tu lado.',uk:'Alicia Mortgage | Дім в Іспанії. Людина на вашому боці.'}[lang];
+  document.title={en:'Alicia Mortgage | A home in Spain A person on your side',es:'Alicia Mortgage | Un hogar en España Alguien a tu lado',uk:'Alicia Mortgage | Дім в Іспанії Людина на вашому боці'}[lang];
   document.querySelector('meta[name="description"]').content={en:'Personal mortgage guidance for your home in Spain. Meet Olesia and plan your next chapter with clarity.',es:'Acompañamiento hipotecario personal para tu hogar en España. Conoce a Olesia y planifica tu nueva etapa con claridad.',uk:'Особистий іпотечний супровід для вашого дому в Іспанії. Познайомтеся з Олесею та впевнено плануйте нову сторінку життя.'}[lang];
   try{localStorage.setItem('alicia-language',lang);}catch{}
   window.dispatchEvent(new Event('alicia-language-change'));
